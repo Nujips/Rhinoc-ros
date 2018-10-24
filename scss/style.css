@@ -1,0 +1,6 @@
+body{
+  background-color: lightblue;
+}
+#content {
+  min-height: calc(100vh - 320px);
+}
