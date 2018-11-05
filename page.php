@@ -76,13 +76,10 @@ $description='';
 
       <div class="form-group">
         <button type="submit">
-          envoyer
+          Envoyer
           <span class="fas fa-check"></span>
         </button>
-
-        <input type="submit" value="Envoyer">
       </div>
-
      </form>
 
     <?php include("layouts/footer.php");?>

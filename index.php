@@ -27,16 +27,16 @@
 
 <?php include("layouts/header.php");?>
 
-    <main id="content">
+    <main class="container">
 
-      <div class="list">
+      <div class="liste">
         <h2>Les derniers évenements</h2>
 
-        <div class="list-group">
+        <div class="liste">
           <?php
           foreach ($events as $event) {
           ?>
-          <a href="#" class="list-group-item list-group-item-action active">
+          <a href="#" class="liste">
             <?php echo $event["title"]; ?>
           </a>
         <?php } ?>
