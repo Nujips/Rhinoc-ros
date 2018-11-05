@@ -1,7 +1,7 @@
 <?php
 /* recupere les derniers evenements dans la bd */
   //connexion à la bd
-  require("php/db.php");
+
 
   //requete sql
   $sql="SELECT *

@@ -1,16 +1,16 @@
 <?php
   $title ='Contact';
   $description='';
+  include("php/db.php");
 ?>
 <?php include("php/get_events.php");?>
 
 <?php include("layouts/header.php");?>
 
-    <main class="container">
+    <main id="content">
 
-      <div class="liste">
+      <div class="list">
         <h2>Les derniers évenements</h2>
-<<<<<<< HEAD
         <?php
         foreach ($events as $event) {
           ?>
@@ -21,18 +21,6 @@
               </a>
             </li>
           </ul>
-=======
-
-        <div class="liste">
-          <?php
-          foreach ($events as $event) {
-          ?>
-          <a href="#" class="liste">
-            <?php echo $event["title"]; ?>
-          </a>
-        <?php } ?>
-        </div>
->>>>>>> master
 
         <?php } ?>
 

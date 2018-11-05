@@ -1,12 +1,11 @@
 <?php
-  include("php/db.php");
-  
+
   $sql = "SELECT *
           FROM events
-          WHERE id=:id";
+          JOIN members
+          ON events.idcreator=members.id";
 
   $stmt = $conn->prepare($sql);
-  $stmt->bindValue(":id", $id);
   $stmt->execute();
-  $eventinfo = $stmt->fetch();
+  $member = $stmt->fetch();
 ?>
