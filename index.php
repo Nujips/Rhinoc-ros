@@ -32,6 +32,9 @@
       <div class="list">
         <h2>Les derniers évenements</h2>
         <?php
+        foreach ($events as $event) {
+          echo $event;
+        }
 
         ?>
       </div>
