@@ -101,4 +101,10 @@ pour effacer la session -> unset($_SESSION);
 dans page 2:
 echo $_SESSION['name'];
 
+
+
+se deconnecter
+session_start();
+session_destroy();
+header('Location: index.php')
 -->
