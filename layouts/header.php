@@ -1,3 +1,4 @@
+<?php include("layouts/head.php");?>
 <header>
-  LE HEADER
+  le header
 </header>
