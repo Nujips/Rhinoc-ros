@@ -1,0 +1,32 @@
+body{
+ 	background-image: url(fond1.jpg);
+ }
+
+#content {
+  min-height: calc(100vh - 320px);
+}
+
+.fond_blur {
+	margin-top: 80px;
+	background-color: #FFFFFF80;
+	padding: 20px;
+	border-radius: 30px;
+	text-align: center;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.liste{
+	color: black;
+	display: block;
+}
+
+.coucou{
+	color: white;
+	position:absolute;
+	bottom:2px;
+}
+
+.row{
+	margin-top: 50px;
+}

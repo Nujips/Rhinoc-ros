@@ -36,13 +36,16 @@ if (!empty($_POST)) {
 
 // si le formulaire est valide
 	if (empty($error)) {
-		$sql="INSERT INTO members 
-		VALUES (NULL, :first_name, :last_name, :email, :password, NOW())";
+		$sql="INSERT INTO members (first_name, last_name, email, password, date_created)
+		VALUES (:first_name, :last_name, :email, :password, NOW())";
 
 		$stmt = $conn->prepare($sql);
 
-		$stmt->bindValue(":username", $username);
+		$stmt->bindValue(":first_name", $first_name);
+		$stmt->bindValue(":last_name", $last_name);
 		$stmt->bindValue(":email", $email);
+
+
 
 //algo par défaut: bcrypt
 		$password = password_hash($password, PASSWORD_DEFAULT,[
@@ -59,8 +62,9 @@ if (!empty($_POST)) {
 <?php include("layouts/header.php");?>
 
 
-<main class="container fond_blur">
-	<h1>Inscrivez vous sur notre majestueux site</h1>
+<main class="fond_blur">
+	<h1>Inscrivez vous</h1>
+	<h2>Pour participer aux meilleurs évènements de Nantes</h2>
 	<form method="post">
 
 		<div class="row">
@@ -72,8 +76,8 @@ if (!empty($_POST)) {
 				<div class="form-group">
 					<label for="first_name">Votre prénom</label>
 					<input class="form-control" type="text" name="first_name" id="first_name">
-</div>
-					<div class="form-group">
+				</div>
+				<div class="form-group">
 					<label for="email">Votre e-mail</label>
 					<input class="form-control" type="email" name="email" id="email">
 				</div>
@@ -87,10 +91,6 @@ if (!empty($_POST)) {
 				<div class="form-group">
 					<label for="password_bis">Encore une fois?</label>
 					<input class="form-control" type="password" name="password_bis" id="password_bis">
-				</div>
-				<div class="form-group">
-					<label for="phone_number">Votre numéro?</label>
-					<input class="form-control" type="text" name="phone_number" id="phone_number">
 				</div>
 			</div>
 		</div>
