@@ -21,7 +21,7 @@
   $events = $stmt->fetchAll();
 
   //on teste
-  print_r($events);
+  //print_r($events);
 
 ?>
 
@@ -31,14 +31,18 @@
 
       <div class="list">
         <h2>Les derniers évenements</h2>
-        <?php
-        foreach ($events as $event) {
+
+        <div class="list-group">
+          <?php
+          foreach ($events as $event) {
           ?>
-          
-
+          <a href="#" class="list-group-item list-group-item-action active">
+            <?php echo $event["title"]; ?>
+          </a>
         <?php } ?>
+        </div>
 
-        ?>
+
       </div>
 
 
