@@ -6,10 +6,11 @@
 
 <?php include("layouts/header.php");?>
 
-    <main id="content">
+    <main class="container">
 
-      <div class="list">
+      <div class="liste">
         <h2>Les derniers évenements</h2>
+<<<<<<< HEAD
         <?php
         foreach ($events as $event) {
           ?>
@@ -20,6 +21,18 @@
               </a>
             </li>
           </ul>
+=======
+
+        <div class="liste">
+          <?php
+          foreach ($events as $event) {
+          ?>
+          <a href="#" class="liste">
+            <?php echo $event["title"]; ?>
+          </a>
+        <?php } ?>
+        </div>
+>>>>>>> master
 
         <?php } ?>
 
