@@ -2,12 +2,11 @@
   $title ='Contact';
   $description='';
   include ("php/db.php");
-
-
 ?>
 
 <?php include("php/get_events.php");?>
-<?php include("php/get_user.php");?>
+
+<?php include("php/get_userinfo.php");?>
 
 <?php include("layouts/header.php");?>
 
@@ -18,12 +17,15 @@
 
   <div>
     <h2> Ses évenements </h2>
+
     <?php
-    foreach ($user as $u) {
+    foreach ($member_event as $me) {
       ?>
       <ul>
         <li>
-            <?php echo $u['title'] ?>
+          <a href="info.php?id=<?php echo $me['id'] ?>">
+            <?php echo $me['title'] ?>
+          </a>
         </li>
       </ul>
 
