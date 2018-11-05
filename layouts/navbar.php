@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
-    <img src="img/logo.png" width="40" height="30" class="d-inline-block align-top" alt="">
     Rhinoc-ros
+    <img src="img/logo.png" width="60" height="30" class="d-inline-block align-top" alt="">
   </a>
 </nav>
 
