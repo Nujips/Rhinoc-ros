@@ -9,7 +9,7 @@
   //requete sql
   $sql="SELECT title
         FROM events
-        ORDER BY dateCreated DESC";
+        ORDER BY date_created DESC";
 
   //envoie la requête à MySQL, sans l'executer
   $stmt = $conn->prepare($sql);
@@ -33,8 +33,10 @@
         <h2>Les derniers évenements</h2>
         <?php
         foreach ($events as $event) {
-          echo $event;
-        }
+          ?>
+          
+
+        <?php } ?>
 
         ?>
       </div>
