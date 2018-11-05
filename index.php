@@ -4,7 +4,7 @@
 
 /* recupere les derniers evenements dans la bd */
   //connexion à la bd
-  require("db.php");
+  require("php/db.php");
 
   //requete sql
   $sql="SELECT title
