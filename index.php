@@ -21,7 +21,7 @@ $description='';
         $('nomid').on('click',function(e){
           e.preventDefault();
 
-          $('nomidbox').toggleClass('active'); /*dans le css on met #nomidbox.active{ display: none etc..}
+          $('nomidbox').toggleClass('active'); /*dans le css on met #nomidbox.active{ display: none etc..}*/
           console.log('clic');
         })
       })
