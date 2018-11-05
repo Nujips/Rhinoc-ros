@@ -1,6 +1,7 @@
 body{
-  background-color: lightblue;
-}
+ 	background-image: url(fond1.jpg);
+ }
+
 #content {
   min-height: calc(100vh - 320px);
 }
