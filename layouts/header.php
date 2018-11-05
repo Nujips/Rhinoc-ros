@@ -1,4 +1,4 @@
 <?php include("layouts/head.php");?>
 <header>
-  le header
+  <?php include("navbar.php")?>
 </header>
