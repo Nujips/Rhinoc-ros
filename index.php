@@ -14,13 +14,11 @@
         <?php
         foreach ($events as $event) {
           ?>
-          <ul>
-            <li>
-              <a href="info.php?id=<?php echo $event['id'] ?>">
+          <div class="list-group">
+              <a class='list-group-item list-group-item-action' href="info.php?id=<?php echo $event['id'] ?>">
                 <?php echo $event['title'] ?>
               </a>
-            </li>
-          </ul>
+          </div>
 
         <?php } ?>
 
