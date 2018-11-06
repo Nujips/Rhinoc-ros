@@ -26,6 +26,7 @@
 
       <div>
         CALENDRIER
+        <?php include("php/calendar.php")?>
       </div>
 
     </main>
