@@ -7,7 +7,7 @@
 <main class="fond_blur">
 	<h1>Inscrivez vous</h1>
 	<h2>Pour participer aux meilleurs évènements de Nantes</h2>
-	<form method="post" action="php/register">
+	<form method="post" action="php/register.php">
 		<div class="row">
 			<div class="col-sm-12 col-md-6">
 				<div class="form-group">
@@ -64,4 +64,3 @@
 <?php $_SESSION['errors'] = null; ?>
 
 <?php include("layouts/footer.php");?>
-
