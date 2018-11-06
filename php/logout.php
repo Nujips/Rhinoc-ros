@@ -7,5 +7,5 @@
 	session_destroy();
 
 	//on redirige vers l'acceuil
-	header("location: index.php");
+	header("location: ./index.php");
 ?>

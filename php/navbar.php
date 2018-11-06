@@ -17,11 +17,20 @@
       <a href="./register.php"class="nav-item nav-link">S'inscrire</a>
     </div>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <a href="./profil.php"class="nav-item nav-link">Mon profil</a>
-      <a href="php/logout.php" class="nav-item nav-link" >Se déconnecter</a>
+      <?php
+      if(!empty($_SESSION['member'])){
+        ?>
+          <a href="./profil.php"class="nav-item nav-link">Mon profil</a>
+      <?php
+      } ?>
+
+      <?php
+      if(!empty($_SESSION['member'])){
+        ?>
+          <a href="php/logout.php" class="nav-item nav-link" >Se déconnecter</a>
+      <?php
+      } ?>
+
     </div>
   </div>
 </nav>
-
-
-    
