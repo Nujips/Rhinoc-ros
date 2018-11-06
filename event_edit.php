@@ -65,9 +65,14 @@ $error="";
 		</div>
 
     <!--bouton valider-->
+		<?php
+		if(!empty($_SESSION['member'])){
+			?>
     <div class="form-group">
 			<button type="submit" class="btn btn-success">Valider</button>
 		</div>
+		<?php
+		} ?>
 	</form>
 </main>
 
