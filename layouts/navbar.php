@@ -16,5 +16,9 @@
       <a href="./login.php" class="nav-item nav-link" href="#">Se connecter</a>
       <a href="./register.php"class="nav-item nav-link" href="#">S'inscrire</a>
     </div>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <a href="./profil.php"class="nav-item nav-link" href="#">Mon profil</a>
+      <a href="#" class="nav-item nav-link" href="#">Se déconnecter</a>
+    </div>
   </div>
 </nav>
