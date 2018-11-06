@@ -23,12 +23,6 @@
       if(empty($_SESSION['member'])){
         ?>
           <a href="./login.php" class="nav-item nav-link">Se connecter</a>
-      <?php
-      } ?>
-
-      <?php
-      if(empty($_SESSION['member'])){
-        ?>
           <a href="./register.php"class="nav-item nav-link">S'inscrire</a>
       <?php
       } ?>
@@ -38,15 +32,12 @@
       if(!empty($_SESSION['member'])){
         ?>
           <a href="./myprofil.php"class="nav-item nav-link">Mon profil</a>
+          <a href="php/logout.php" class="nav-item nav-link" >Se déconnecter</a>
+          <a href="./create_event.php" class="nav-item nav-link" >Creer un evenement</a>
       <?php
       } ?>
 
-      <?php
-      if(!empty($_SESSION['member'])){
-        ?>
-          <a href="php/logout.php" class="nav-item nav-link" >Se déconnecter</a>
-      <?php
-      } ?>
+
 
     </div>
 

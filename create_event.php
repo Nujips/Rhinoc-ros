@@ -4,10 +4,10 @@ $error="";
 ?>
 
 <?php include("layouts/header.php");?>
-
+<?php include("php/create_event.php");?>
 
 <main class="fond_blur">
-	<h1>Modifier l'evenement</h1>
+	<h1>Creer evenement</h1>
 
 	<form method="post">
 
@@ -27,12 +27,12 @@ $error="";
 
 				<div class="form-group">
 					<label for="datestart">Date de début: </label>
-					<input class="form-control" type="datetime" name="datestart" id="datestart">
+					<input class="form-control" type="datetime-local" name="datestart" id="datestart">
 				</div>
 
         <div class="form-group">
           <label for="dateend">Date de fin: </label>
-          <input class="form-control" type="datetime" name="dateend" id="dateend">
+          <input class="form-control" type="datetime-local" name="dateend" id="dateend">
         </div>
 
 			</div>
@@ -70,9 +70,7 @@ $error="";
 			<button type="submit" class="btn btn-success">Valider</button>
 		</div>
 
-		<div class="form-group">
-			<a href="#"><button type="button" class="btn btn-success">Supprimer</button></a>
-		</div>
+
 
 	</form>
 </main>

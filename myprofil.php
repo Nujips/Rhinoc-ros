@@ -6,7 +6,7 @@
 ?>
 
 <?php include("layouts/header.php");?>
-<?php include("layouts/myprofil.php");?>
+<?php include("php/myprofil.php");?>
 
 <main class="fond_blur">
   <h1> Mon profil</h1>
