@@ -1,12 +1,26 @@
-html, body {
-	height: 100%;
-	margin: 0; padding: 0;
+footer{
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    background-color: #F8F8F8;
+    border-top: 1px solid #E7E7E7;
+    text-align:center;
+    padding:20px;
+    font-size: 0.7rem;
 }
+
+.connec{
+	font-size: 1.5rem;
+}
+
+html {
+  min-height: 100%;
+}
+
 
 body{
  	background-image: url(fond1.jpg);
-	font-family: 'Tenor Sans', sans-serif;
-	display : table;
+	font-family: 'Cabin', sans-serif;	display : table;
 	width: 100%;
  }
 
@@ -30,29 +44,7 @@ body{
 	display: block;
 }
 
-.coucou{
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
-
-}
 
 .row{
 	margin-top: 50px;
-}
-
-.errorblanc{
-	display: none;
-}
-
-.error {
-	margin-bottom: 20px;
-	margin-left: 20%;
-	margin-right: 20%;
-	padding:20px;
-	color: white;
 }
