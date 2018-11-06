@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
-  
-    <img src="img/logo.png" width="60" height="30" class="d-inline-block align-top" alt="">
+
+     <img src="img/logo.png" width="60" height="30" class="d-inline-block align-top" alt="">
     Rhinoc-ros
   </a>
 </nav>
@@ -12,10 +12,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Accueil<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Se connecter</a>
-      <a class="nav-item nav-link" href="#">S'inscrire</a>
-      <a class="nav-item nav-link disabled" href="#">Disabled</a>
+      <a href="./index.php" class="nav-item nav-link active" href="#">Accueil<span class="sr-only">(current)</span></a>
+      <a href="./login.php" class="nav-item nav-link" href="#">Se connecter</a>
+      <a href="./register.php"class="nav-item nav-link" href="#">S'inscrire</a>
     </div>
   </div>
 </nav>
