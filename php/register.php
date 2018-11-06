@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once("db.php");
 session_start();
 
@@ -47,6 +47,7 @@ if (isset($_POST)) {
 
 	// si le formulaire est valide
 	if (empty($_SESSION['errors'])) {
+
 		$sql="INSERT INTO members (first_name, last_name, email, password, date_created)
 		VALUES (:first_name, :last_name, :email, :password, NOW())";
 
