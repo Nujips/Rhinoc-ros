@@ -2,10 +2,10 @@
   <p>
     <?php
       if (empty($_SESSION['member'])){
-        echo "Vous n'êtes pas connecté";
+        echo '<div class="connec">Vous n\'êtes pas connecté</div>';
       }
       else{
-        echo "Vous êtes connecté ------------"; /*echo "Vous êtes connecté en tant que" . $_SESSION['member']['username'];*/
+        echo '<div class="connec">Vous êtes connecté</div>' ; /*echo "Vous êtes connecté en tant que" . $_SESSION['member']['username'];*/
       }
     ?>
   </p>
