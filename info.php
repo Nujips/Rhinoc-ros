@@ -61,6 +61,8 @@
     <!-- nombre de participants -->
     <p> <?php echo  ("Nombre max de participants: ") . $eventinfo["participant_number"]?></p> <!-- nombre de participants -->
 
+    <a href="event_edit.php"> <div> Modifier l'evenement </div> </a>
+
   </div>
 
 </main>
