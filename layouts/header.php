@@ -1,4 +1,5 @@
 <?php include("layouts/head.php");?>
 <header>
-  <?php include("php/navbar.php")?>
+  <?php session_start();?>
+  <?php include("navbar.php")?>
 </header>
