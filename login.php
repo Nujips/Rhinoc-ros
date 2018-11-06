@@ -25,7 +25,7 @@
 	<div class="error"><?php echo $error; ?></div>
 
 	<div class="form-group">
-		<button type="submit" class="btn btn-success" action="php/login.php">Valider</button>
+		<button type="submit" class="btn btn-lights" action="php/login.php">Valider</button>
 	</div>
 
 </div>
