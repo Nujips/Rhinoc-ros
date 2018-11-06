@@ -1,4 +1,4 @@
-<?php 
+<?php
 require("php/db.php");
 
 
@@ -23,13 +23,14 @@ if (!empty($_POST)) {
 		if ($passwordIsOk) {
 			session_start();
 			$_SESSION['member'] = $member;
+			header("location: index.php");
 		}
 		else {
 			$error="Mauvais identifiant";
 		}
 	}
 
-	else {	
+	else {
 		$error="Mauvais identifiant";
 	}
 
