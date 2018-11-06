@@ -5,8 +5,8 @@
 ?>
 
 <?php include("php/get_events.php");?>
-<?php include("php/get_user.php");?>
 <?php include("php/get_eventinfo.php");?>
+<?php include("php/get_user.php");?>
 
 <?php include("layouts/header.php");?>
 
@@ -45,8 +45,8 @@
 
     <!-- personne | faire un lien sur le profil de la personne -->
     <?php echo ("Organisateur: ")?>
-      <a href="profil.php?iduser=<?php echo $member['idcreator'] ?>">
-        <?php echo $member["first_name"] . $member["last_name"] ?>
+      <a href="profil.php?iduser=<?php echo $eventinfo['idcreator'] ?>">
+        <?php echo $resultIdCreator["first_name"] . ("&nbsp") . $resultIdCreator["last_name"] ?>
       </a>
 
     <!-- adresse de l'event -->

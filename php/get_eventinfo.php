@@ -1,5 +1,5 @@
 <?php
-
+  
   $id = $_GET['id'];
   $sql = "SELECT *
           FROM events
