@@ -1,5 +1,6 @@
 body{
  	background-image: url(fond1.jpg);
+	font-family: 'Tenor Sans', sans-serif;
  }
 
 #content {
@@ -30,8 +31,11 @@ body{
 	margin-top: 50px;
 }
 
+.errorblanc{
+	display: none;
+}
+
 .error {
-	background-color: #FE5656FF;
 	margin-bottom: 20px;
 	margin-left: 20%;
 	margin-right: 20%;

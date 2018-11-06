@@ -9,7 +9,7 @@ if (!empty($_POST)) {
 	$last_name = $_POST['last_name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-	$passwordBis = $_POST['password_bis'];
+	$password_bis = $_POST['password_bis'];
 
 //on vérifie que les gens sont pas des abrutis
 	if (empty($email)) {
@@ -18,7 +18,7 @@ if (!empty($_POST)) {
 	elseif (empty($password)) {
 		$error = "Avoir un mot de passe, c'est mieux";
 	}
-	elseif (empty($passwordBis)) {
+	elseif (empty($password_bis)) {
 		$error = "Encore une fois stp";
 	}
 
@@ -28,7 +28,7 @@ if (!empty($_POST)) {
 	}
 
 
-	if ($password != $passwordBis) {
+	if ($password != $password_bis) {
 		$error = "Les mots de passes ne sont pas identiques";
 	}
 
@@ -94,7 +94,15 @@ if (!empty($_POST)) {
 			</div>
 		</div>
 
-		<div class="error"><?php echo $error; ?></div>
+			<?php
+			if (!empty($error)) {?>
+			<div class="error"><?php echo $error; ?></div>
+			<?php }
+			else {?>
+			<div class="errorblanc"></div>
+			<?php }
+			?>
+
 
 		<div class="form-group">
 			<button type="submit" class="btn btn-success">Valider</button>
@@ -103,3 +111,5 @@ if (!empty($_POST)) {
 </main>
 
 <?php include("layouts/footer.php");?>
+</body>
+</html>
