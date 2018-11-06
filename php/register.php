@@ -25,19 +25,19 @@ if (isset($_POST)) {
 	if ($password != $password_bis) {
 		$_SESSION['errors']['password'] = "Les mots de passes ne sont pas identiques";
 	}
-	if (isset($first_name)) {
+	if (empty($first_name)) {
 		$_SESSION['errors']['first_name'] = "Ce champ est obligatoire";
 	}
-	if (isset($last_name)) {
+	if (empty($last_name)) {
 		$_SESSION['errors']['last_name'] = "Ce champ est obligatoire";
 	}
-	if (isset($password)) {
+	if (empty($password)) {
 		$_SESSION['errors']['password'] = "Ce champ est obligatoire";
 	}
-	if (isset($password_bis)) {
+	if (empty($password_bis)) {
 		$_SESSION['errors']['password_bis'] = "Ce champ est obligatoire";
 	}
-	if (isset($email)) {
+	if (empty($email)) {
 		$_SESSION['errors']['email'] = "Ce champ est obligatoire";
 	}
 
