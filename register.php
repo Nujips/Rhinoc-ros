@@ -1,91 +1,52 @@
-<?php 
-require("php/db.php");
-$error="";
-
-//est-ce que le formulaire est soumis?
-if (!empty($_POST)) {
-//on créé des variables plus sympas
-	$first_name = $_POST['first_name'];
-	$last_name = $_POST['last_name'];
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-	$password_bis = $_POST['password_bis'];
-
-//on vérifie que les gens sont pas des abrutis
-	if (empty($email)) {
-		$error = "Merci de renseigner votre e-mail svp";		
-	}
-	elseif (empty($password)) {
-		$error = "Avoir un mot de passe, c'est mieux";
-	}
-	elseif (empty($password_bis)) {
-		$error = "Encore une fois stp";
-	}
-
-//email valide?
-	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		$error = "Ton email n'est pas valide";
-	}
-
-
-	if ($password != $password_bis) {
-		$error = "Les mots de passes ne sont pas identiques";
-	}
-
-
-// si le formulaire est valide
-	if (empty($error)) {
-		$sql="INSERT INTO members (first_name, last_name, email, password, date_created)
-		VALUES (:first_name, :last_name, :email, :password, NOW())";
-
-		$stmt = $conn->prepare($sql);
-
-		$stmt->bindValue(":first_name", $first_name);
-		$stmt->bindValue(":last_name", $last_name);
-		$stmt->bindValue(":email", $email);
-
-
-
-//algo par défaut: bcrypt
-		$password = password_hash($password, PASSWORD_DEFAULT,[
-'cost' => 15 //pour faire en sorte que le chargement soit lent pour dissuader les hackeurs
-]);
-
-		$stmt->bindValue(":password", $password);
-
-		$stmt->execute();
-	}
-}
-
-?>
 <?php include("layouts/header.php");?>
+<?php session_start(); ?>
+
+
 
 
 <main class="fond_blur">
 	<h1>Inscrivez vous</h1>
 	<h2>Pour participer aux meilleurs évènements de Nantes</h2>
-	<form method="post">
-
+	<form method="post" action="php/register">
 		<div class="row">
 			<div class="col-sm-12 col-md-6">
 				<div class="form-group">
 					<label for="last_name">Votre nom</label>
 					<input class="form-control" type="text" name="last_name" id="last_name">
+					<?php if(array_key_exists('last_name', $_SESSION['errors'])){ ?>
+						<div class="alert alert-danger mt-2">
+						<?php echo $_SESSION['errors']['last_name']; ?>
+						</div>
+					<?php } ?>
 				</div>
 				<div class="form-group">
 					<label for="first_name">Votre prénom</label>
 					<input class="form-control" type="text" name="first_name" id="first_name">
+					<?php if(array_key_exists('first_name', $_SESSION['errors'])){ ?>
+						<div class="alert alert-danger mt-2">
+						<?php echo $_SESSION['errors']['first_name']; ?>
+						</div>
+					<?php } ?>
 				</div>
 				<div class="form-group">
 					<label for="email">Votre e-mail</label>
 					<input class="form-control" type="email" name="email" id="email">
+					<?php if(array_key_exists('email', $_SESSION['errors'])){ ?>
+						<div class="alert alert-danger mt-2">
+						<?php echo $_SESSION['errors']['email']; ?>
+						</div>
+					<?php } ?>
 				</div>
 			</div>
-
 			<div class="col-sm-12 col-md-6">
 				<div class="form-group">
 					<label for="password">Votre mot de passe</label>
 					<input class="form-control" type="password" name="password" id="password">
+					<?php if(array_key_exists('password', $_SESSION['errors'])){ ?>
+						<div class="alert alert-danger mt-2">
+						<?php echo $_SESSION['errors']['password']; ?>
+						</div>
+					<?php } ?>
 				</div>
 				<div class="form-group">
 					<label for="password_bis">Encore une fois?</label>
@@ -93,16 +54,6 @@ if (!empty($_POST)) {
 				</div>
 			</div>
 		</div>
-
-			<?php
-			if (!empty($error)) {?>
-			<div class="error"><?php echo $error; ?></div>
-			<?php }
-			else {?>
-			<div class="errorblanc"></div>
-			<?php }
-			?>
-
 
 		<div class="form-group">
 			<button type="submit" class="btn btn-success">Valider</button>
