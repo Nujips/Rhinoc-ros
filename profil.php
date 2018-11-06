@@ -14,6 +14,7 @@
 
   <h1> <?php echo $member["first_name"] . $member["last_name"] ?> </h1>
   <p> <?php echo ("Email: ") .  $member["email"]?> </p>
+  <p> <?php echo ("Email: ") .  $member["email"]?> </p>
 
   <div>
     <h2> Ses évenements </h2>
