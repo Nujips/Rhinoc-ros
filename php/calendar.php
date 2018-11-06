@@ -1,4 +1,8 @@
-$(function() {
+
+<div id="calendar"></div>
+
+	<script>
+		$(function() {
 
   // page is now ready, initialize the calendar...
 
@@ -7,3 +11,6 @@ $(function() {
   })
 
 });
+	</script>
+
+

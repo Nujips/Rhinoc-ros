@@ -64,5 +64,4 @@
 <?php $_SESSION['errors'] = null; ?>
 
 <?php include("layouts/footer.php");?>
-</body>
-</html>
+
