@@ -1,6 +1,5 @@
-
-
 <?php include("layouts/header.php");?>
+<?php include("php/login.php");?>
 
 <div class="fond_blur">
 	<h1>Connectez vous</h1>
