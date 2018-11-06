@@ -1,7 +1,6 @@
 <?php
 require("php/db.php");
-
-
+/*unset($db);*/
 $error ="";
 
 if (!empty($_POST)) {
