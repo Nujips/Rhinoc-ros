@@ -1,7 +1,4 @@
 <?php include("layouts/header.php");?>
-<?php session_start(); ?>
-
-
 
 
 <main class="fond_blur">

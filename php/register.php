@@ -59,8 +59,11 @@ if (isset($_POST)) {
 
 		session_start();
 		$_SESSION['errors'] = [
+
 			'email' 	=> 'Merci de renseigner votre e-mail svp',
+ 
 			'password' 	=> 'Avoir un mot de passe, c\'est mieux'
+
 		];	
 
 		header('Location: ../register.php');

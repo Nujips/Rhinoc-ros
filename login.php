@@ -1,40 +1,4 @@
-<?php 
-require("php/db.php");
 
-
-$error ="";
-
-if (!empty($_POST)) {
-
-	$email = $_POST['email'];
-	$password= $_POST["password"];
-
-
-	$sql = "SELECT * FROM members WHERE email = :email";
-
-	$stmt = $conn->prepare($sql);
-	$stmt->bindValue (":email", $email);
-	$stmt->execute();
-	$member = $stmt->fetch();
-
-	if (!empty($member)) {
-		$passwordIsOk = password_verify($password, $member['password']);
-
-		if ($passwordIsOk) {
-
-			$_SESSION['member'] = $member;
-		}
-		else {
-			$error="Mauvais identifiant";
-		}
-	}
-
-	else {	
-		$error="Mauvais identifiant";
-	}
-
-
-}?>
 
 <?php include("layouts/header.php");?>
 
@@ -57,7 +21,7 @@ if (!empty($_POST)) {
 	</div>
 	<div class="error"><?php echo $error; ?></div>
 	<div class="form-group">
-		<button type="submit" class="btn btn-success">Valider</button>
+		<button type="submit" class="btn btn-success" action="php/login.php">Valider</button>
 	</div>
 </div>
 
