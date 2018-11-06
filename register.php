@@ -8,7 +8,6 @@ if (!empty($_POST)) {
 	$first_name = $_POST['first_name'];
 	$last_name = $_POST['last_name'];
 	$email = $_POST['email'];
-	$phone_number = $_POST['phone_number'];
 	$password = $_POST['password'];
 	$passwordBis = $_POST['password_bis'];
 
@@ -30,7 +29,7 @@ if (!empty($_POST)) {
 
 
 	if ($password != $passwordBis) {
-		$error = "Apprend à taper sur un clavier";
+		$error = "Les mots de passes ne sont pas identiques";
 	}
 
 
