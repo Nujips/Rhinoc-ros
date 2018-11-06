@@ -56,7 +56,7 @@
 		</div>
 
 		<div class="form-group">
-			<button type="submit" class="btn btn-success">Valider</button>
+			<button type="submit" class="btn btn-light">Valider</button>
 		</div>
 	</form>
 </main>
