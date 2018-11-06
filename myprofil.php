@@ -16,7 +16,7 @@
   <p><?php echo ("Date de création: ") . $user["date_created"]?></p>
 
   <div>
-    <p>Supprimer mon compte</p>
+    <a href="#"><p>Supprimer mon compte</p></a>
   </div>
 
   <h2> Mes evenements </h2>

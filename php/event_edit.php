@@ -2,7 +2,9 @@
 require("php/db.php");
 $error="";
 /*----------------RECUPERER L'ID DE LA PERSONNE CONNCECTEE------------------*/
+$iduser = $_SESSION['member']['id'];
 /*----------------RECUPERER L'ID DE L'EVENT------------------*/
+
 
 if(!empty($_POST)){
 
@@ -47,7 +49,7 @@ if(!empty($_POST)){
 
 	/*mettre les infos dans la bd*/
 	$sql = "INSERT INTO events
-					VALUES(NULL, :title, :description, :datestart, :dateend, :idcreator, :adress, :url, NOW(), :price, :participant_number )
+					VALUES(NULL, :title, :description, :datestart, :dateend, :iduser, :adress, :url, NOW(), :price, :participant_number )
 					WHERE events.id= :id";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(":id", $id);
@@ -55,12 +57,13 @@ if(!empty($_POST)){
 	$stmt->bindValue(":description", $description);
 	$stmt->bindValue(":datestart", $datestart);
 	$stmt->bindValue(":dateend", $dateend);
-	$stmt->bindValue(":idcreator", $idcreator);
+	$stmt->bindValue(":iduser", $iduser);
 	$stmt->bindValue(":adress", $adress);
 	$stmt->bindValue(":url", $url);
 	$stmt->bindValue(":price", $price);
 	$stmt->bindValue(":participant_number", $participant_number);
-
+	$stmt->execute();
+	header('Location: info.php');
 	}
 }
 
