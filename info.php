@@ -12,7 +12,10 @@
 
 <main class="fond_blur">
 
-  <div class="list">
+<div class="row">
+
+  <!--gauche-->
+  <div class="col-sm-12 col-md-6">
     <h2>Les derniers évenements</h2>
     <?php
     foreach ($events as $event) {
@@ -27,7 +30,8 @@
 
   </div>
 
-  <div class="event_infos">
+  <!--droite-->
+    <div class="col-sm-12 col-md-6">
     <!-- titre -->
     <h1><?php echo $eventinfo["title"] ?></h1>
 
@@ -62,6 +66,8 @@
     <a href="event_edit.php"> <div> Modifier l'evenement </div> </a>
 
   </div>
+
+</div><!--div class row-->
 
 </main>
 
