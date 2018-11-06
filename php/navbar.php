@@ -39,7 +39,7 @@
       <?php
       if(!empty($_SESSION['member'])){
         ?>
-          <a href="./profil.php"class="nav-item nav-link">Mon profil</a>
+          <a href="./myprofil.php"class="nav-item nav-link">Mon profil</a>
       <?php
       } ?>
 
