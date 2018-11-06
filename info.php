@@ -10,7 +10,7 @@
 
 <?php include("layouts/header.php");?>
 
-<main id="content">
+<main class="fond_blur">
 
   <div class="list">
     <h2>Les derniers évenements</h2>
@@ -67,6 +67,3 @@
 
 
 <?php include("layouts/footer.php");?>
-
-  </body>
-</html>

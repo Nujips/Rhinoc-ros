@@ -7,7 +7,7 @@
 
 <?php include("layouts/header.php");?>
 
-    <main id="content">
+    <main class="fond_blur">
 
       <div class="list">
         <h2>Les derniers évenements</h2>
@@ -26,11 +26,12 @@
 
       </div>
 
-
+      <div>
+        CALENDRIER
+      </div>
 
     </main>
 
-<?php include("layouts/footer.php");?>
 
-  </body>
-</html>
+
+<?php include("layouts/footer.php");?>
