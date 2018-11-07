@@ -1,11 +1,10 @@
 <?php
 require("php/db.php");
-$error="";
 ?>
 
 <?php include("layouts/header.php");?>
-<?php include("php/event_edit.php");?>
 <?php include("php/get_eventinfo.php");?>
+<?php include("php/event_edit.php");?>
 
 <main class="fond_blur">
 
