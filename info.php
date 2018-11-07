@@ -7,6 +7,7 @@
 <?php include("php/get_events.php");?>
 <?php include("php/get_eventinfo.php");?>
 <?php include("php/get_user.php");?>
+<?php include("php/get_participants.php");?>
 
 <?php include("layouts/header.php");?>
 
@@ -15,7 +16,7 @@
 <div class="row">
 
   <!--gauche-->
-  <div class="col-sm-12 col-md-6">
+  <div class="col-sm">
     <h2>Les derniers évenements</h2>
     <?php
     foreach ($events as $event) {
@@ -30,8 +31,8 @@
 
   </div>
 
-  <!--droite-->
-    <div class="col-sm-12 col-md-6">
+  <!--milieu-->
+  <div class="col-sm">
     <!-- titre -->
     <h1><?php echo $eventinfo["title"] ?></h1>
 
@@ -73,6 +74,22 @@
       <?php } ?>
 
   <?php }?>
+  </div>
+
+  <!--droite-->
+  <div class="col-sm">
+    <h2>Les participants:</h2>
+    <!---avec id de l'event, faire lien avec la table participants pour trouver les members qui participent-->
+    <?php
+    foreach ($participants as $p) {
+      ?>
+      <div class="list-group">
+          <a class='list-group-item list-group-item-action' href="profil.php?iduser=<?php echo $p['iduser'] ?>">
+            <?php echo $p['iduser'] ?>
+          </a>
+      </div>
+
+    <?php } ?>
   </div>
 
 </div><!--div class row-->
