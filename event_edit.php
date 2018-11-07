@@ -5,7 +5,6 @@ require("php/db.php");
 <?php include("layouts/header.php");?>
 <?php include("php/get_eventinfo.php");?>
 <?php include("php/event_edit.php");?>
-<?php include("php/delete_event.php");?>
 
 <main class="fond_blur">
 
@@ -77,11 +76,10 @@ require("php/db.php");
 			<button type="submit" class="btn btn-success">Valider</button>
 		</div>
 
-		<div class="form-group">
-			<a href="php/delete_event.php?id=<?php echo $id?>"><button type="button" class="btn btn-success">Supprimer</button></a>
-		</div>
-
 	</form>
+	<div class="form-group">
+		<a href="php/delete_event.php?id=<?php echo $id?>"><button type="button" class="btn btn-success">Supprimer</button></a>
+	</div>
 
 <?php }
 else{
