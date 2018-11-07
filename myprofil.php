@@ -10,16 +10,17 @@
 
 <main class="fond_blur">
   <h1> Mon profil</h1>
-  <p><?php echo ("Mon prénom: ") . $user["first_name"]?></p>
-  <p><?php echo ("Mon nom: ") . $user["last_name"]?></p>
-  <p><?php echo ("Mon adresse mail: ") . $user["email"]?></p>
-  <p><?php echo ("Date de création: ") . $user["date_created"]?></p>
+    <p><?php echo ("Mon prénom: ") . $user["first_name"]?></p>
+    <p><?php echo ("Mon nom: ") . $user["last_name"]?></p>
+    <p><?php echo ("Mon adresse mail: ") . $user["email"]?></p>
+    <p><?php echo ("Date de création: ") . $user["date_created"]?></p>
+
 
   <div>
-    <a href="php/delete_acc.php"><p>Supprimer mon compte</p></a>
+    <a href="php/delete_acc.php"><button type="button" class="btn btn-danger">Supprimer mon compte</button></a>
   </div>
 
-  <h2> Mes evenements </h2>
+  <h2> Mes évènements </h2>
 
   <?php
   foreach ($member_event as $me) {

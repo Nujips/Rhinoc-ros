@@ -7,7 +7,7 @@ $error="";
 <?php include("php/create_event.php");?>
 
 <main class="fond_blur">
-	<h1>Creer evenement</h1>
+	<h1>Créer évènement</h1>
 
 	<form method="post">
 
@@ -41,7 +41,7 @@ $error="";
 			<div class="col-sm-12 col-md-6">
 
 				<div class="form-group">
-					<label for="adress">Adresse de l'evenement: </label>
+					<label for="adress">Adresse de l'évènement: </label>
 					<input class="form-control" type="text" name="adress" id="adress">
 				</div>
 
