@@ -60,6 +60,9 @@ if(!empty($_POST)){
   $stmt->execute();
   header('Location: myprofil.php');
 	}
+	else{
+		echo ($error);
+	}
 }
 
 
