@@ -1,10 +1,17 @@
 <?php
-require("php/db.php");
 $error="";
 /*----------------RECUPERER L'ID DE LA PERSONNE CONNCECTEE------------------*/
 $iduser = $_SESSION['member']['id'];
 /*----------------RECUPERER L'ID DE L'EVENT------------------*/
+$event_id=$_GET['event_id'];
 
+/*selectionner l'idcreator de levent*/ /*revenir a avant*/
+/*----faire une requete qui recupere l'idcreator de la personne de l'event----*/
+$sql= "SELECT idcreator FROM events WHERE id=:event_id";
+$stmt = $conn->prepare($sql);
+$stmt->bindValue(":event_id", $event_id);
+$stmt->execute();
+$creator=$stmt ->fetch();
 
 if(!empty($_POST)){
 
@@ -50,9 +57,9 @@ if(!empty($_POST)){
 	/*mettre les infos dans la bd*/
 	$sql = "INSERT INTO events
 					VALUES(NULL, :title, :description, :datestart, :dateend, :iduser, :adress, :url, NOW(), :price, :participant_number )
-					WHERE events.id= :id";
+					WHERE events.id= :event_id";
 	$stmt = $conn->prepare($sql);
-	$stmt->bindValue(":id", $id);
+	$stmt->bindValue(":event_id", $event_id);
 	$stmt->bindValue(":title", $title);
 	$stmt->bindValue(":description", $description);
 	$stmt->bindValue(":datestart", $datestart);

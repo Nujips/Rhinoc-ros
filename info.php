@@ -69,7 +69,7 @@
 
       <!--si c'est son evenement alors il peut le modifier-->
       <?php if($_SESSION['member']['id'] ==  $eventinfo['idcreator']){?>
-        <a href="event_edit.php"> <div> Modifier l'evenement </div> </a>
+        <a href="event_edit.php?event_id=<?php echo $eventinfo['id'] ?>"> <div> Modifier l'evenement </div> </a>
       <?php } ?>
 
   <?php }?>

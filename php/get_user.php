@@ -1,6 +1,5 @@
 <?php
 
-
   //2-  Avec cette requete sql, on cherche à avoir les informations de la personne qui a crée l'evenement en fonction de l'id de ce dernier
 
   //On récupère l'id de l'evenement en question
