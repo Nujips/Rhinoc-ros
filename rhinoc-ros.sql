@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 06 Novembre 2018 à 09:47
+-- Généré le :  Mer 07 Novembre 2018 à 10:39
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -36,19 +36,17 @@ CREATE TABLE IF NOT EXISTS `events` (
   `adress` text NOT NULL,
   `url` varchar(200) DEFAULT NULL,
   `date_created` datetime NOT NULL,
-  `price` int(11) NOT NULL,
+  `price` int(11) unsigned NOT NULL,
   `participant_number` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `events`
 --
 
 INSERT INTO `events` (`id`, `title`, `description`, `date_start`, `date_end`, `idcreator`, `adress`, `url`, `date_created`, `price`, `participant_number`) VALUES
-(1, 'event 1 ', 'rzgqzrsgsehgsethqe', '2018-11-05 20:36:00', '2018-11-06 00:00:00', 1, '1 rue de jesaispas', 'wow.com', '2018-11-05 15:36:00', 100, 20),
-(2, 'event 2 ', 'rzgqlhgozqilfhvzivqrzgqf', '2018-11-06 20:36:00', '2018-11-07 00:00:00', 1, '2 rue de supercool', 'blabla.com', '2018-11-05 15:37:00', 2, 100),
-(3, 'event 3', 'la descritionhgehgksehgsehg', '2018-11-22 00:00:00', '2018-11-23 00:00:00', 2, '5 rue de la liberté', 'okokok.okok', '2018-11-05 16:31:00', 0, 20);
+(4, 'hihi event de cynthia', 'rzkhgoqlrshfOZQM<RSG?V', '2222-02-22 22:22:00', '2222-02-22 22:22:00', 3, '1 RUE DE JPPPPPPP', 'MAIS OSEKOUR', '2018-11-07 10:36:41', 100000, 1);
 
 -- --------------------------------------------------------
 
@@ -75,15 +73,14 @@ CREATE TABLE IF NOT EXISTS `members` (
   `password` varchar(250) NOT NULL,
   `date_created` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `members`
 --
 
 INSERT INTO `members` (`id`, `first_name`, `last_name`, `email`, `password`, `date_created`) VALUES
-(1, 'cynthia', 'raj', 'cyn@gmail.com', '123456789', '2018-11-05 15:13:10'),
-(2, 'saro', 'hihi', 'saro@yahoo.fr', '123456789', '2018-11-05 16:36:00');
+(3, 'Cynthia', 'Rajanarison', 'c@c.c', '$2y$15$88I6ET5XiXv.5MCj56AE4uuYhGYyoA5gBdRdxJ6r5pS5er6tvNK1a', '2018-11-07 10:35:34');
 
 -- --------------------------------------------------------
 
