@@ -47,7 +47,7 @@ $error="";
 
 				<div class="form-group">
 					<label for="url">URL: </label>
-					<input class="form-control" type="text" name="url" id="url">
+					<input class="form-control" type="url" name="url" id="url">
 				</div>
 
         <div class="form-group">

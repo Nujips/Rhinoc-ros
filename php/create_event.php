@@ -15,7 +15,6 @@ if(!empty($_POST)){
 	$url = $_POST['url'];
 	$price = $_POST['price'];
 	$participant_number = $_POST['participant_number'];
-
 	/*verification des erreurs*/
 	if(empty($title)){
 		$error = "Veuillez renseigner le titre!";
@@ -32,12 +31,7 @@ if(!empty($_POST)){
 	elseif (empty($adress)){
 		$error = "Veuillez renseigner l'adresse'!";
 	}
-	elseif (empty($url)){
-		$error = "Veuillez renseigner l'url'!";
-	}
-	elseif (empty($price)){
-		$error = "Veuillez renseigner le prix'!";
-	}
+
 	elseif (empty($participant_number)){
 		$error = "Veuillez renseigner la date de fin!";
 	}

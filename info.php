@@ -63,11 +63,16 @@
     <!-- nombre de participants -->
     <p> <?php echo  ("Nombre max de participants: ") . $eventinfo["participant_number"]?></p> <!-- nombre de participants -->
 
-    <!--si c'est l'evenement de la personne connectee, il s'affiche-->
-    <?php if($_SESSION['member']['id'] ==  $eventinfo['idcreator']){?>
-    <a href="event_edit.php"> <div> Modifier l'evenement </div> </a>
-    
-  <?php } ?>
+
+    <!--si la personne est connectee-->
+    <?php if(!empty($_SESSION['member'])){?>
+
+      <!--si c'est son evenement alors il peut le modifier-->
+      <?php if($_SESSION['member']['id'] ==  $eventinfo['idcreator']){?>
+        <a href="event_edit.php"> <div> Modifier l'evenement </div> </a>
+      <?php } ?>
+
+  <?php }?>
   </div>
 
 </div><!--div class row-->
