@@ -62,7 +62,7 @@ if (isset($_POST)) {
 		$stmt->execute();
 
 		$_SESSION['email'] = $_POST['email'];
-		header('Location: ../');
+		header('Location: ../login.php');
 	} else {
 		header('Location: ../register.php');
 	}
