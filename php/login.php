@@ -1,5 +1,5 @@
 <?php
-require("php/db.php");
+
 /*unset($db);*/
 $error ="";
 
