@@ -4,9 +4,15 @@ $error="";
 ?>
 
 <?php include("layouts/header.php");?>
-
+<?php include("php/event_edit.php");?>
 
 <main class="fond_blur">
+
+	<!--securiser la page à la bonne personne-->
+	<?php
+	/*	il faut que la personne connectee ait le mm id que le idcreator de l'event */
+		if($iduser = $creator){?>
+
 	<h1>Modifier l'evenement </h1>
 
 	<form method="post">
@@ -75,6 +81,11 @@ $error="";
 		</div>
 
 	</form>
+
+<?php }
+else{
+	echo ("Vous n'avez pas acces à cette page!");
+}?>
 </main>
 
 
