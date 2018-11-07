@@ -1,4 +1,4 @@
-<footer>
+  <footer>
   <p>
     <?php
       if (empty($_SESSION['member'])){

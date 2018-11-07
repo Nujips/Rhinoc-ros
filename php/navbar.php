@@ -32,8 +32,8 @@
       if(!empty($_SESSION['member'])){
         ?>
           <a href="./myprofil.php"class="nav-item nav-link">Mon profil</a>
-          <a href="php/logout.php" class="nav-item nav-link" >Se déconnecter</a>
           <a href="./create_event.php" class="nav-item nav-link" >Créer un évènement</a>
+          <a href="php/logout.php" class="nav-item nav-link">Se déconnecter</a>
       <?php
       } ?>
 
