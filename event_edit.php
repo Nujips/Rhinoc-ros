@@ -5,13 +5,14 @@ $error="";
 
 <?php include("layouts/header.php");?>
 <?php include("php/event_edit.php");?>
+<?php include("php/get_eventinfo.php");?>
 
 <main class="fond_blur">
 
 	<!--securiser la page à la bonne personne-->
 	<?php
 	/*	il faut que la personne connectee ait le mm id que le idcreator de l'event */
-		if($iduser = $creator){?>
+		if($iduser == $creator['idcreator']){?>
 
 	<h1>Modifier l'evenement </h1>
 
@@ -23,12 +24,12 @@ $error="";
 
 				<div class="form-group">
 					<label for="title">Titre</label>
-					<input class="form-control" type="text" name="title" id="title" >
+					<input class="form-control" type="text" name="title" id="title" value="<?php echo $eventinfo['title']?>">
 				</div>
 
 				<div class="form-group">
 					<label for="description">Description: </label>
-					<input class="form-control" type="textarea" name="description" id="description">
+					<input class="form-control" type="textarea" name="description" id="description" value="<?php echo $eventinfo['description']?>">
 				</div>
 
 				<div class="form-group">
@@ -48,22 +49,22 @@ $error="";
 
 				<div class="form-group">
 					<label for="adress">Adresse de l'évènement: </label>
-					<input class="form-control" type="text" name="adress" id="adress">
+					<input class="form-control" type="text" name="adress" id="adress" value="<?php echo $eventinfo['adress']?>">
 				</div>
 
 				<div class="form-group">
 					<label for="url">URL: </label>
-					<input class="form-control" type="text" name="url" id="url">
+					<input class="form-control" type="text" name="url" id="url"  >
 				</div>
 
         <div class="form-group">
           <label for="price">Prix: </label>
-          <input class="form-control" type="number" name="price" id="price">
+          <input class="form-control" type="number" name="price" id="price" value="<?php echo $eventinfo['price']?>">
         </div>
 
         <div class="form-group">
           <label for="participant_number">Nombre maximum de participants: </label>
-          <input class="form-control" type="number" name="participant_number" id="participant_number">
+          <input class="form-control" type="number" name="participant_number" id="participant_number" value="<?php echo $eventinfo['participant_number']?>">
         </div>
 
 			</div>
