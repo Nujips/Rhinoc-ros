@@ -1,5 +1,5 @@
 <?php
-  
+
   $id = $_GET['id'];
   $sql = "SELECT *
           FROM events
@@ -9,4 +9,5 @@
   $stmt->bindValue(":id", $id);
   $stmt->execute();
   $eventinfo = $stmt->fetch();
+
   ?>
