@@ -5,8 +5,8 @@ $iduser = $_SESSION['member']['id'];
 /*----------------RECUPERER L'ID DE L'EVENT------------------*/
 $event_id=$_GET['event_id'];
 
-/*selectionner l'idcreator de levent*/ /*revenir a avant*/
-/*----faire une requete qui recupere l'idcreator de la personne de l'event----*/
+/*selectionner l'idcreator de levent*/
+/*----faire une requete qui recupere l'idcreator de la personne de l'event-----*/
 $sql= "SELECT idcreator FROM events WHERE id=:event_id";
 $stmt = $conn->prepare($sql);
 $stmt->bindValue(":event_id", $event_id);

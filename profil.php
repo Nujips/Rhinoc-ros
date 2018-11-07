@@ -12,7 +12,7 @@ include ("php/db.php");
 
 <main class="fond_blur">
 
-      <h1> <?php echo $member["first_name"] . $member["last_name"] ?> </h1>
+      <h1> <?php echo $member["first_name"] . " " .  $member["last_name"] ?> </h1>
       <p> <?php echo ("Email: ") .  $member["email"]?> </p>
 
 
