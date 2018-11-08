@@ -68,8 +68,14 @@
 
     <!--si la personne est connectee-->
     <?php if(!empty($_SESSION['member'])){?>
-
-      <button type="button" class="btn btn-light" ><a href="php/participate.php?id=<?php echo $eventinfo['id']?>">Participer</a></button>
+      <?php include('php/check_participations.php');
+      if ($estParticipant==0) { ?>
+        <button type="button" class="btn btn-light" ><a href="php/participate.php?id=<?php echo $eventinfo['id']?>">Participer</a></button>
+     <?php } else { ?>
+  <button type="button" class="btn btn-light" ><a href="php/cancel_part.php?id=<?php echo $eventinfo['id']?>">Annuler ma participation</a></button>
+     <?php }
+      ?>
+      
       <!--si c'est son evenement alors il peut le modifier-->
 
       <?php if($_SESSION['member']['id'] ==  $eventinfo['idcreator']){?>
@@ -90,8 +96,8 @@
     foreach ($participants as $p) {
       ?>
       <div class="list-group">
-          <a class='list-group-item list-group-item-action' href="profil.php?iduser=<?php echo $p['iduser'] ?>">
-            <?php echo $p['iduser'] ?>
+          <a class='list-group-item list-group-item-action' href="profil.php?iduser=<?php echo $p['id'] ?>">
+            <?php echo $p['last_name']." ".$p['first_name'] ?>
           </a>
       </div>
 

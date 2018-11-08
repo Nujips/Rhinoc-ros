@@ -11,6 +11,6 @@
   $stmt->bindValue(":idevent", $idevent);
   $stmt->execute();
 
-  header('Location: ../myprofil.php');
-
+  header("Location: ../info.php?id=$idevent");
+  
 ?>
