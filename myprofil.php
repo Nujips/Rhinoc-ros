@@ -8,6 +8,7 @@
 <?php include("layouts/header.php");?>
 
 <?php include("php/get_myprofilinfo.php");?>
+<?php include("php/get_myparticipatedevent.php");?>
 
 <main class="fond_blur">
   <h1> Mon profil</h1>
@@ -32,10 +33,22 @@
         <?php echo $me['title'] ?>
       </a>
     </div>
-  </div>
-
 
 <?php } ?>
+
+
+    <h2> Je participe: </h2>
+
+        <?php foreach ($myparticipant_event as $mpe) {
+        ?>
+
+          <div class="list-group">
+            <a class='list-group-item list-group-item-action' href="info.php?id=<?php echo $mpe['iduser'] ?>">
+              <?php echo $mpe['title'] ?>
+            </a>
+          </div>
+        <?php } ?>
+
 
 
 </main>

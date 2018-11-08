@@ -7,6 +7,6 @@
            ON events.id = participants.idevent and participants.iduser = :id";
      $stmt = $conn->prepare($sql);
     $stmt->bindValue(":id", $id);
-     $stmt->execute();
-     $participant_event = $stmt->fetchAll();
+    $stmt->execute();
+    $participant_event = $stmt->fetchAll();
   ?>
