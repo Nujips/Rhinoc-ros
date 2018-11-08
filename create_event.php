@@ -4,12 +4,11 @@ $error="";
 ?>
 
 <?php include("layouts/header.php");?>
-<?php include("php/create_event.php");?>
 
 <main class="fond_blur">
 	<h1>Créer évènement</h1>
 
-	<form method="post">
+	<form method="post" action="php/create_event.php">
 
 		<div class="row">
       <!--Gauche-->

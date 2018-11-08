@@ -7,6 +7,7 @@
 
 <?php include("php/get_events.php");?>
 <?php include("php/get_eventinfo.php");?>
+
 <?php include("php/get_user.php");?>
 <?php include("php/get_participants.php");?>
 

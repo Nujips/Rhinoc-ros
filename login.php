@@ -1,11 +1,11 @@
 <?php include("layouts/header.php");?>
-<?php include("php/login.php");?>
+
 
 <div class="fond_blur">
 	<h1>Connectez vous</h1>
 	<h2>Pour participer aux meilleurs évènements de Nantes</h2>
 
-	<form method="post">
+	<form method="post" action="php/login.php">
 
 	<div class="row">
 		<div class="col-sm-12 col-md-6">
@@ -21,8 +21,6 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="error"><?php echo $error; ?></div>
 
 	<div class="form-group">
 		<button type="submit" class="btn btn-light" action="php/login.php">Valider</button>

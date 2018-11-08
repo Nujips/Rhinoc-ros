@@ -4,11 +4,10 @@ $description='';
 include ("php/db.php");
 ?>
 
-<?php include("php/get_events.php");?>
-
-<?php include("php/get_userinfo.php");?>
-
 <?php include("layouts/header.php");?>
+
+<?php include("php/get_events.php");?>
+<?php include("php/get_userinfo.php");?>
 
 <main class="fond_blur">
 

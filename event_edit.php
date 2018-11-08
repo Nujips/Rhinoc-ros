@@ -5,18 +5,19 @@ require("php/db.php");
 <?php include("layouts/header.php");?>
 
 <?php include("php/get_eventinfo.php");?>
-<?php include("php/event_edit.php");?>
 
 <main class="fond_blur">
 
 	<!--securiser la page à la bonne personne-->
-	<?php
-	/*	il faut que la personne connectee ait le mm id que le idcreator de l'event */
-		if($iduser == $creator['idcreator']){?>
 
 	<h1>Modifier l'evenement </h1>
 
-	<form method="post">
+	<form method="post" action="php/event_edit.php">
+
+		<?php
+		/*	il faut que la personne connectee ait le mm id que le idcreator de l'event */
+			if($iduser == $creator['idcreator']){?>
+
 
 		<div class="row">
       <!--Gauche-->
