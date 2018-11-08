@@ -3,6 +3,7 @@ require("php/db.php");
 ?>
 
 <?php include("layouts/header.php");?>
+
 <?php include("php/get_eventinfo.php");?>
 <?php include("php/event_edit.php");?>
 

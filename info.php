@@ -9,7 +9,6 @@
 <?php include("php/get_eventinfo.php");?>
 <?php include("php/get_user.php");?>
 <?php include("php/get_participants.php");?>
-<?php include("php/participate.php");?>
 
 
 <main class="fond_blur">
@@ -69,7 +68,6 @@
     <!--si la personne est connectee-->
     <?php if(!empty($_SESSION['member'])){?>
 
-      <a href="php/participate.php?id=<?php echo $eventinfo['id']?>"><div>Participer</div></a>
       <!--si c'est son evenement alors il peut le modifier-->
 
       <?php if($_SESSION['member']['id'] ==  $eventinfo['idcreator']){?>
@@ -85,7 +83,7 @@
   <!--droite-->
   <div class="col-sm">
     <h2>Les participants:</h2>
-    <!---avec id de l'event, faire lien avec la table participants pour trouver les members qui participent-->
+    <!---avec id de l'event, faire lien avec la table participants pour trouver les members qui participant-->
     <?php
     foreach ($participants as $p) {
       ?>
