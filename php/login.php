@@ -23,7 +23,7 @@ if (!empty($_POST)) {
 		if ($passwordIsOk) {
 			session_start();
 			$_SESSION['member'] = $member;
-			header("location: index.php");
+			header("location: ../index.php");
 		}
 		else {
 			$error="Mauvais identifiant";

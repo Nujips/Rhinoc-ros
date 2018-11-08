@@ -8,6 +8,7 @@ include ("php/db.php");
 
 <?php include("php/get_events.php");?>
 <?php include("php/get_userinfo.php");?>
+<?php include("php/get_participants.php");?>
 
 <main class="fond_blur">
 
@@ -15,22 +16,32 @@ include ("php/db.php");
       <p> <?php echo ("Email: ") .  $member["email"]?> </p>
 
 
-        <h2> Ses évenements </h2>
+        <h2> Ses évènements: </h2>
 
-        <?php
-        foreach ($member_event as $me) {
-          ?>
+        <?php foreach ($member_event as $me) {
+        ?>
 
           <div class="list-group">
             <a class='list-group-item list-group-item-action' href="info.php?id=<?php echo $me['id'] ?>">
               <?php echo $me['title'] ?>
             </a>
           </div>
-        </div>
+        <?php } ?>
 
 
-    <?php } ?>
-  </div>
+        <h2> Il participe:  </h2>
+
+                <?php foreach ($participant_event as $pe) {
+                ?>
+
+                  <div class="list-group">
+                    <a class='list-group-item list-group-item-action' href="info.php?id=<?php echo $pe['iduser'] ?>">
+                      <?php echo $pe['title'] ?>
+                    </a>
+                  </div>
+                <?php } ?>
+
+
 
 </main>
 

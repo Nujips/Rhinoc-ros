@@ -69,7 +69,7 @@
     <!--si la personne est connectee-->
     <?php if(!empty($_SESSION['member'])){?>
 
-      <button type="button" class="btn btn-light"><a href="php/participate.php?id=<?php echo $eventinfo['id']?>">Participer</a></button>
+      <button type="button" class="btn btn-light" ><a href="php/participate.php?id=<?php echo $eventinfo['id']?>">Participer</a></button>
       <!--si c'est son evenement alors il peut le modifier-->
 
       <?php if($_SESSION['member']['id'] ==  $eventinfo['idcreator']){?>
