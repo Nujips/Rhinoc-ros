@@ -81,10 +81,12 @@ $iduser = $_SESSION['member']['id'];
 
     <div class="form-group">
 			<button type="submit" class="btn btn-success">Valider</button>
+			<a href="info.php?id=<?php echo $eventinfo['id']?>"><button type="button" class="btn btn-success">Retour</button></a>
 		</div>
-		
+
 
 	</form>
+
 
 
 <?php }

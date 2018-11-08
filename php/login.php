@@ -1,17 +1,14 @@
 <?php
 
-/*unset($db);*/
 require("db.php");
 $error ="";
 
-if (!empty($_POST)) {
+if (!empty($_POST)){
 
 	$email = $_POST['email'];
 	$password= $_POST["password"];
 
-
 	$sql = "SELECT * FROM members WHERE email = :email";
-
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue (":email", $email);
 	$stmt->execute();
@@ -34,5 +31,6 @@ if (!empty($_POST)) {
 		$error="Mauvais identifiant";
 	}
 
+}
 
-}?>
+?>
