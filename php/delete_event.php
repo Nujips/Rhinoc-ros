@@ -9,6 +9,6 @@
   $stmt->bindValue(":id", $id);
   $stmt->execute();
 
-  header('Location: myprofil.php');
+  header('Location: ../myprofil.php');
 
   ?>

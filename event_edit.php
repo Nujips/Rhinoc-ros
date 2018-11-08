@@ -77,9 +77,7 @@ require("php/db.php");
 		</div>
 
 	</form>
-	<div class="form-group">
-		<a href="php/delete_event.php?id=<?php echo $id?>"><button type="button" class="btn btn-success">Supprimer</button></a>
-	</div>
+
 
 <?php }
 else{

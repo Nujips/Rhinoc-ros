@@ -71,7 +71,9 @@
       <!--si c'est son evenement alors il peut le modifier-->
       <?php if($_SESSION['member']['id'] ==  $eventinfo['idcreator']){?>
         <a href="event_edit.php?id=<?php echo $eventinfo['id']?>"> <div> Modifier l'evenement </div> </a>
+        <a href="php/delete_event.php?id=<?php echo $id?>"><div>Supprimer</div></a>
       <?php } ?>
+
 
   <?php }?>
   </div>
