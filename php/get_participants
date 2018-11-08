@@ -1,5 +1,0 @@
-<?php
-
-$sql = "SELECT * FROM members WHERE members.id=participants.iduser AND events.id = participants.idevent"
-
-?>

@@ -87,7 +87,7 @@
       ?>
       <div class="list-group">
           <a class='list-group-item list-group-item-action' href="profil.php?iduser=<?php echo $p['iduser'] ?>">
-            <?php echo $p['iduser'] ?>
+            <?php echo $p['first_name'] ?>
           </a>
       </div>
 
