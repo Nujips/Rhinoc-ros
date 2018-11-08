@@ -14,6 +14,9 @@
   <!--partie sans logo et nom-->
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
+    <div class="navbar-nav">
+      <a class="nav-link" href="#debuger" data-toggle="collapse" role="button">Debuger</a>
+    </div>
 
     <div class="navbar-nav">
       <a href="./index.php" class="nav-item nav-link active">Accueil<span class="sr-only">(current)</span></a>
