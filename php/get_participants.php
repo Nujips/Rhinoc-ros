@@ -1,8 +1,10 @@
  <?php
    $id = $_GET['id'];
-   $sql = "SELECT iduser
+   $sql = "SELECT id, first_name, last_name
            FROM participants
-           where idevent=:id";
+           INNER JOIN members 
+           ON participants.iduser = members.id
+           WHERE idevent=:id";
 
    $stmt = $conn->prepare($sql);
    $stmt->bindValue(":id", $id);

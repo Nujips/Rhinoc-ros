@@ -43,7 +43,7 @@
         ?>
 
           <div class="list-group">
-            <a class='list-group-item list-group-item-action' href="info.php?id=<?php echo $mpe['iduser'] ?>">
+            <a class='list-group-item list-group-item-action' href="info.php?id=<?php echo $mpe['id'] ?>">
               <?php echo $mpe['title'] ?>
             </a>
           </div>
