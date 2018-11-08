@@ -1,4 +1,5 @@
 <?php
+
   $id = $_GET['id'];
   $sql = "SELECT *
           FROM events
@@ -10,7 +11,7 @@
   $eventinfo = $stmt->fetch();
 
   /*----------------RECUPERER L'ID DE LA PERSONNE CONNCECTEE------------------*/
-  $iduser = $_SESSION['member']['id'];
+  /*$iduser = $_SESSION['member']['id'];*/
   /*----------------RECUPERER L'ID DE L'EVENT------------------*/
   /*$id=$_GET['id']; pas besoin car deja dans le get_eventinfo*/
 
