@@ -3,13 +3,14 @@
   $description='';
   include ("php/db.php");
 ?>
+<?php include("layouts/header.php");?>
 
 <?php include("php/get_events.php");?>
 <?php include("php/get_eventinfo.php");?>
 <?php include("php/get_user.php");?>
 <?php include("php/get_participants.php");?>
+<?php include("php/participate.php");?>
 
-<?php include("layouts/header.php");?>
 
 <main class="fond_blur">
 
@@ -68,8 +69,11 @@
     <!--si la personne est connectee-->
     <?php if(!empty($_SESSION['member'])){?>
 
+      <a href="php/participate.php?id=<?php echo $eventinfo['id']?>"><div>Participer</div></a>
       <!--si c'est son evenement alors il peut le modifier-->
+
       <?php if($_SESSION['member']['id'] ==  $eventinfo['idcreator']){?>
+
         <a href="event_edit.php?id=<?php echo $eventinfo['id']?>"> <div> Modifier l'evenement </div> </a>
         <a href="php/delete_event.php?id=<?php echo $id?>"><div>Supprimer</div></a>
       <?php } ?>
@@ -87,7 +91,7 @@
       ?>
       <div class="list-group">
           <a class='list-group-item list-group-item-action' href="profil.php?iduser=<?php echo $p['iduser'] ?>">
-            <?php echo $p['first_name'] ?>
+            <?php echo $p['iduser'] ?>
           </a>
       </div>
 

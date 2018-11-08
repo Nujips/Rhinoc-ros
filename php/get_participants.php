@@ -9,5 +9,4 @@
    $stmt->execute();
    $participants = $stmt->fetchAll();
 
-
 ?>
