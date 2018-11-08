@@ -1,10 +1,13 @@
 <?php
 require("php/db.php");
+
 ?>
 
 <?php include("layouts/header.php");?>
 
-<?php include("php/get_eventinfo.php");?>
+<?php include("php/get_eventinfo.php");
+$iduser = $_SESSION['member']['id'];
+?>
 
 <main class="fond_blur">
 
@@ -22,6 +25,13 @@ require("php/db.php");
 		<div class="row">
       <!--Gauche-->
 			<div class="col-sm-12 col-md-6">
+
+				<input type="hidden" value="5" required>
+				<!--id--->
+				<div class="form-group">
+					<label for="id"></label>
+					<input type="hidden" name="id" id="id" value="<?php echo $eventinfo['id']?>">
+				</div>
 
 				<div class="form-group">
 					<label for="title">Titre</label>

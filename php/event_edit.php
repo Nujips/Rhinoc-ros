@@ -1,12 +1,13 @@
 <?php
 /*recupere les infos de l'event*/
-
+require('db.php');
+session_start();
 $error="";
-
 
 if(!empty($_POST)){
 
 	/*on recupere les valeurs*/
+	$id = $_POST['id'];
 	$title = $_POST['title'];
 	$description = $_POST['description'];
 	$datestart = $_POST['datestart'];
@@ -40,9 +41,10 @@ if(!empty($_POST)){
 	if(empty($error)){
 
 	/*mettre les infos dans la bd*/
+
 	$sql="UPDATE events
 				SET title = :title, description = :description, date_start=:datestart, date_end=:dateend, adress=:adress, url=:url, price=:price, participant_number=:participant_number
-	 			WHERE id = :id";
+	 			WHERE id = :id";/*id de l'event*/
 
 	$stmt = $conn->prepare($sql);
 
@@ -58,7 +60,7 @@ if(!empty($_POST)){
 
 	$stmt->execute();
 
-	header('Location: info.php?id=<?php echo $id ?>'); /*mettre le bon id*/
+	header('Location: ../index.php'); /*mettre le bon id   info.php?id=<?php echo $id ?>*/
 	}
 
 }
