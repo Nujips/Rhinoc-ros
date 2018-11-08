@@ -17,12 +17,12 @@
 <div class="row">
 
   <!--gauche-->
-  <div class="col-sm">
+  <div class="col-sm-3">
     <h2>Les derniers évenements</h2>
     <?php
     foreach ($events as $event) {
       ?>
-      <div class="list-group">
+      <div class="list-group-3">
           <a  class='list-group-item list-group-item-action' href="info.php?id=<?php echo $event['id'] ?>">
             <?php echo $event['title'] ?>
           </a>
@@ -33,7 +33,7 @@
   </div>
 
   <!--milieu-->
-  <div class="col-sm">
+  <div class="col-sm-6">
     <!-- titre -->
     <h1><?php echo $eventinfo["title"] ?></h1>
 
@@ -75,7 +75,7 @@
   <button type="button" class="btn btn-light" ><a href="php/cancel_part.php?id=<?php echo $eventinfo['id']?>">Annuler ma participation</a></button>
      <?php }
       ?>
-      
+
       <!--si c'est son evenement alors il peut le modifier-->
 
       <?php if($_SESSION['member']['id'] ==  $eventinfo['idcreator']){?>
@@ -89,7 +89,7 @@
   </div>
 
   <!--droite-->
-  <div class="col-sm">
+  <div class="col-sm-3">
     <h2>Les participants:</h2>
     <!---avec id de l'event, faire lien avec la table participants pour trouver les members qui participant-->
     <?php

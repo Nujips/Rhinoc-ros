@@ -1,6 +1,5 @@
 <?php
 require("php/db.php");
-
 ?>
 
 <?php include("layouts/header.php");?>
@@ -21,17 +20,13 @@ $iduser = $_SESSION['member']['id'];
 		/*	il faut que la personne connectee ait le mm id que le idcreator de l'event */
 			if($iduser == $creator['idcreator']){?>
 
+			<!--id--->
+			<input type="hidden" name="id" id="id" value="<?php echo $eventinfo['id']?>">
 
 		<div class="row">
       <!--Gauche-->
 			<div class="col-sm-12 col-md-6">
 
-				<input type="hidden" value="5" required>
-				<!--id--->
-				<div class="form-group">
-					<label for="id"></label>
-					<input type="hidden" name="id" id="id" value="<?php echo $eventinfo['id']?>">
-				</div>
 
 				<div class="form-group">
 					<label for="title">Titre</label>
@@ -87,6 +82,7 @@ $iduser = $_SESSION['member']['id'];
     <div class="form-group">
 			<button type="submit" class="btn btn-success">Valider</button>
 		</div>
+		
 
 	</form>
 

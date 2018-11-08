@@ -30,7 +30,7 @@ include ("php/db.php");
         <?php } ?>
 
 
-        <h2> Il participe:  </h2>
+        <h2> Elle participe:  </h2>
 
                 <?php foreach ($participant_event as $pe) {
                 ?>
