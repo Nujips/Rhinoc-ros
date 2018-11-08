@@ -8,7 +8,8 @@ include ("php/db.php");
 
 <?php include("php/get_events.php");?>
 <?php include("php/get_userinfo.php");?>
-<?php include("php/get_participants.php");?>
+<!--recupere les evenements auxquels la personne participe-->
+<?php include("php/get_participatedevent.php");?>
 
 <main class="fond_blur">
 
