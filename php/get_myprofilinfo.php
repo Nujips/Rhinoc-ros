@@ -4,8 +4,8 @@ $iduser = $_SESSION['member']['id'];
 
 /*on recupere toutes les informations de celle-ci*/
 $sql = "SELECT *
-        FROM members
-        WHERE id = :iduser";
+FROM members
+WHERE id = :iduser";
 
 $stmt = $conn->prepare($sql);
 $stmt-> bindValue(":iduser", $iduser);
@@ -15,8 +15,8 @@ $user = $stmt->fetch();
 
 /*On recupere ses evenements*/
 $sql = "SELECT *
-        FROM events
-        WHERE events.idcreator = :iduser ";
+FROM events
+WHERE events.idcreator = :iduser ";
 $stmt = $conn->prepare($sql);
 $stmt->bindValue(":iduser", $iduser);
 $stmt->execute();

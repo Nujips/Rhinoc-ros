@@ -1,69 +1,69 @@
 footer{
-    position: fixed;
-    width: 100vw;
-    bottom: 0;
-    background-color: #F8F8F8;
-    border-top: 1px solid #E7E7E7;
-    text-align:center;
-    padding:20px;
-    padding-top: 0px;
-    font-size: 0.7rem;
+	position                : fixed;
+	width                   : 100vw;
+	bottom                  : 0;
+	background-color        : #F8F8F8;
+	border-top              : 1px solid #E7E7E7;
+	text-align              : center;
+	padding                 : 20px;
+	padding-top             : 0px;
+	font-size               : 0.7rem;
 }
 
 .connec{
-	font-size: 1.5rem;
+	font-size               : 1.5rem;
 }
 
 
 button{
-	padding: 50px;
-	margin:50px;
+	padding                 : 50px;
+	margin                  : 50px;
 }
 
 .colorme{
-	color: red;
+	color                   : red;
 }
 
 
 html {
-  min-height: 100%;
+	min-height              : 100%;
 
 }
 
 
 
 body{
-  background: url(fond1.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-	font-family: 'Cabin', sans-serif;	display : table;
-	width: 100%;
-	margin-bottom: 20%;
+	background              : url(fond1.jpg) no-repeat center center fixed;
+	-webkit-background-size : cover;
+	-moz-background-size    : cover;
+	-o-background-size      : cover;
+	background-size         : cover;
+	font-family             : 'Cabin', sans-serif;	display : table;
+	width                   : 100%;
+	margin-bottom           : 20%;
  }
 
 
 #content {
-  min-height: calc(100vh - 320px);
+	min-height              : calc(100vh - 320px);
 }
 
 .fond_blur {
-	margin-top: 80px;
-	background-color: #FFFFFF80;
-	padding: 20px;
-	border-radius: 30px;
-	text-align: center;
-	margin-left: 40px;
-	margin-right: 40px;
+	margin-top              : 80px;
+	background-color        : #FFFFFF80;
+	padding                 : 20px;
+	border-radius           : 30px;
+	text-align              : center;
+	margin-left             : 40px;
+	margin-right            : 40px;
 }
 
 .liste{
-	color: black;
-	display: block;
+	color                   : black;
+	display                 : block;
 }
 
 
 .row{
-	margin-top: 50px;
+	margin-top              : 50px;
 }

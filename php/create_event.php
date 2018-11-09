@@ -40,21 +40,21 @@ if(!empty($_POST)){
 
 	if(empty($error)){
 
-	/*mettre les infos dans la bd*/
-	$sql = "INSERT INTO events
-					VALUES(NULL, :title, :description, :datestart, :dateend, :iduser, :adress, :url, NOW(), :price, :participant_number )";
-	$stmt = $conn->prepare($sql);
-	$stmt->bindValue(":title", $title);
-	$stmt->bindValue(":description", $description);
-	$stmt->bindValue(":datestart", $datestart);
-	$stmt->bindValue(":dateend", $dateend);
-	$stmt->bindValue(":iduser", $iduser);
-	$stmt->bindValue(":adress", $adress);
-	$stmt->bindValue(":url", $url);
-	$stmt->bindValue(":price", $price);
-	$stmt->bindValue(":participant_number", $participant_number);
-  $stmt->execute();
-  header('Location: myprofil.php');
+		/*mettre les infos dans la bd*/
+		$sql = "INSERT INTO events
+		VALUES(NULL, :title, :description, :datestart, :dateend, :iduser, :adress, :url, NOW(), :price, :participant_number )";
+		$stmt = $conn->prepare($sql);
+		$stmt->bindValue(":title", $title);
+		$stmt->bindValue(":description", $description);
+		$stmt->bindValue(":datestart", $datestart);
+		$stmt->bindValue(":dateend", $dateend);
+		$stmt->bindValue(":iduser", $iduser);
+		$stmt->bindValue(":adress", $adress);
+		$stmt->bindValue(":url", $url);
+		$stmt->bindValue(":price", $price);
+		$stmt->bindValue(":participant_number", $participant_number);
+		$stmt->execute();
+		header('Location: myprofil.php');
 	}
 	else{
 		echo ($error);
