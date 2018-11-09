@@ -1,6 +1,5 @@
 <?php
 require("php/db.php");
-$error="";
 ?>
 
 <?php include("layouts/header.php");?>

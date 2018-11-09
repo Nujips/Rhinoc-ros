@@ -4,10 +4,10 @@ session_start();
 
 $id = $_GET['id'];
 $sql = "DELETE FROM events
-WHERE id=:id";
+        WHERE id=:id";
 $stmt = $conn->prepare($sql);
 $stmt->bindValue(":id", $id);
 $stmt->execute();
 
-  header('Location: ../myprofil.php');
+header('Location: ../myprofil.php');
 ?>

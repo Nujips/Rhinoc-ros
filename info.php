@@ -80,7 +80,7 @@
     <div class="col-sm-3">
       <h2>Les participants:</h2>
       <?php
-      foreach ($participants as $p) { /*recupere grace a get_participants.php*/
+      foreach ($participants as $p) { /*recupere grace a get_participants.php | on parcourt tous les participants et pour chacun on affiche son nom et prenom*/
         ?>
         <div class="list-group">
           <a class='list-group-item list-group-item-action' href="profil.php?iduser=<?php echo $p['id'] ?>">
@@ -90,7 +90,7 @@
       <?php } ?>
     </div>
 
-  </div><!--div class row-->
+  </div>
 
 </main>
 

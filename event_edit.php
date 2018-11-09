@@ -1,8 +1,8 @@
-	<?php
-	require("php/db.php");
-	?>
+<?php
+require("php/db.php");
+?>
 
-	<?php include("layouts/header.php");?>
+<?php include("layouts/header.php");?>
 
 <?php
 include("php/get_eventinfo.php");
@@ -18,10 +18,12 @@ $iduser = $_SESSION['member']['id'];
 		<!--Securise la page pour la bonne personne-->
 		<?php
 		/*	Il faut que la personne qui est connectee ait le même id que le idcreator de l'event */
+		/* Pour cela, on compare l'id de la personne connectee avec celui de la personne qui a cree l'evenement [on le recupere celui-ci grace au
+		fichier get_eventinfo.php*/
 		if($iduser == $creator['idcreator']){?>
 
 			<!--id de l'event--->
-			<input type="hidden" name="id" id="id" value="<?php echo $eventinfo['id']?>">
+			<input type="hidden" name="id" id="id" value="<?php echo $eventinfo['id']?>"> <!--recupere avec event_edit.php-->
 
 				<div class="row">
 		      <!--Gauche-->
