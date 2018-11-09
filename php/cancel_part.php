@@ -13,5 +13,4 @@ $sql = "DELETE FROM participants WHERE iduser = :iduser AND idevent = :idevent";
 	$stmt->execute();
 
 	header("Location: ../info.php?id=$idevent");
-
 ?>

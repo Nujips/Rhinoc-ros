@@ -1,4 +1,3 @@
-
 <?php
     $id = $_GET['iduser'];
      $sql = "SELECT *
@@ -9,4 +8,4 @@
     $stmt->bindValue(":id", $id);
     $stmt->execute();
     $participant_event = $stmt->fetchAll();
-  ?>
+?>
