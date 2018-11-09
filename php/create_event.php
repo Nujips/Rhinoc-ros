@@ -55,7 +55,7 @@ if(!empty($_POST)){
 		$stmt->bindValue(":price", $price);
 		$stmt->bindValue(":participant_number", $participant_number);
 		$stmt->execute();
-		header('Location: myprofil.php');
+		header('Location: ../myprofil.php');
 	}
 	else{
 		echo ($error);
