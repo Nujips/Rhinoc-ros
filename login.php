@@ -26,9 +26,7 @@
 			<button type="submit" class="btn btn-light" action="php/login.php">Valider</button>
 		</div>
 
-
-	</div>
-
 </div>
+
 
 <?php include("layouts/footer.php");?>

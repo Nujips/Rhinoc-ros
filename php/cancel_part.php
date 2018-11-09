@@ -12,6 +12,5 @@ $stmt->bindValue (":iduser", $iduser);
 $stmt->bindValue (":idevent", $idevent);
 $stmt->execute();
 
-header("Location: ../info.php?id=$idevent");
-
+	header("Location: ../info.php?id=$idevent");
 ?>

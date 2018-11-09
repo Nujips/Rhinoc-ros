@@ -12,7 +12,6 @@ $stmt-> bindValue(":iduser", $iduser);
 $stmt->execute();
 $user = $stmt->fetch();
 
-
 /*On recupere ses evenements*/
 $sql = "SELECT *
 FROM events

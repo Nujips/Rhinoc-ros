@@ -1,9 +1,5 @@
 <?php include("layouts/header.php");?>
 
-<?php
-	//var_dump($_SESSION);
-	//die();
-?>
 <main class="fond_blur">
 	<h1>Inscrivez vous</h1>
 	<h2>Pour participer aux meilleurs évènements de Nantes</h2>

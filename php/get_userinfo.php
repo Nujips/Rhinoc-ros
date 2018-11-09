@@ -1,4 +1,8 @@
 <?php
+  $iduser = $_GET['iduser'];
+  $sql = "SELECT *
+          FROM members
+          WHERE members.id=:iduser";
 
 $iduser = $_GET['iduser'];
 $sql = "SELECT *

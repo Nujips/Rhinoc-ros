@@ -1,4 +1,3 @@
-
 <?php
 $id = $_GET['iduser'];
 $sql = "SELECT *

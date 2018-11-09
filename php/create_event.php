@@ -2,6 +2,7 @@
 session_start();
 require('db.php');
 $error="";
+
 /*----------------RECUPERER L'ID DE LA PERSONNE CONNCECTEE------------------*/
 $iduser = $_SESSION['member']['id'];
 
@@ -59,7 +60,6 @@ if(!empty($_POST)){
 	else{
 		echo ($error);
 	}
-
 }
 
 

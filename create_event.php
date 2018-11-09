@@ -6,12 +6,15 @@ $error="";
 <?php include("layouts/header.php");?>
 
 <main class="fond_blur">
+
 	<h1>Créer évènement</h1>
 
+	<!--FORMULAIRE-->
 	<form method="post" action="php/create_event.php">
 
 		<div class="row">
-			<!--Gauche-->
+
+      <!--Partie de gauche: Liste des derniers évènements-->
 			<div class="col-sm-12 col-md-6">
 
 				<div class="form-group">
@@ -36,7 +39,7 @@ $error="";
 
 			</div>
 
-			<!--droite-->
+      <!--Partie du milieu: Recupere les informations de cet evenement-->
 			<div class="col-sm-12 col-md-6">
 
 				<div class="form-group">
@@ -63,16 +66,12 @@ $error="";
 
 		</div>
 
-		<!--bouton valider-->
-
-		<div class="form-group">
+    <!--bouton valider-->
+    <div class="form-group">
 			<button type="submit" class="btn btn-success">Valider</button>
 		</div>
 
-
-
 	</form>
 </main>
-
 
 <?php include("layouts/footer.php");?>
