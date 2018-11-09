@@ -27,6 +27,11 @@
       <?php } ?>
     </div>
 
+
+    <!-- **********************************************verifier que cette page existe********************************************** -->
+    <?php if(isset($eventinfo['id'])){?>
+    <!-- **********************************************verifier que cette page existe********************************************** -->
+
     <!--Partie du milieu: infos de l'evenement-->
     <div class="col-sm-6">
       <!-- titre -->
@@ -76,6 +81,7 @@
     <?php }?>
     </div>
 
+
     <!--Partie de droite: les participants a cet evenement-->
     <div class="col-sm-3">
       <h2>Les participants:</h2>
@@ -89,6 +95,13 @@
         </div>
       <?php } ?>
     </div>
+
+    <!-- **********************************************verifier que cette page existe********************************************** -->
+  <?php }
+  else{
+    header('HTTP/1.0 404 Not Found');
+  }?>
+    <!-- **********************************************verifier que cette page existe********************************************** -->
 
   </div>
 
