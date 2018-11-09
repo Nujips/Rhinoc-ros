@@ -1,9 +1,9 @@
 <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="./index.php">
 
-     <img src="img/logo.png" width="60" height="30" class="d-inline-block align-top" alt="">
-    Rhinoc-ros
-  </a>
+   <img src="img/logo.png" width="60" height="30" class="d-inline-block align-top" alt="">
+   Rhinoc-ros
+ </a>
 </nav>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,19 +25,19 @@
       <?php
       if(empty($_SESSION['member'])){
         ?>
-          <a href="./login.php" class="nav-item nav-link">Se connecter</a>
-          <a href="./register.php"class="nav-item nav-link">S'inscrire</a>
-      <?php
+        <a href="./login.php" class="nav-item nav-link">Se connecter</a>
+        <a href="./register.php"class="nav-item nav-link">S'inscrire</a>
+        <?php
       } ?>
 
       <!---si la personne est connectée-->
       <?php
       if(!empty($_SESSION['member'])){
         ?>
-          <a href="./myprofil.php"class="nav-item nav-link">Mon profil</a>
-          <a href="./create_event.php" class="nav-item nav-link" >Créer un évènement</a>
-          <a href="php/logout.php" class="nav-item nav-link">Se déconnecter</a>
-      <?php
+        <a href="./myprofil.php"class="nav-item nav-link">Mon profil</a>
+        <a href="./create_event.php" class="nav-item nav-link" >Créer un évènement</a>
+        <a href="php/logout.php" class="nav-item nav-link">Se déconnecter</a>
+        <?php
       } ?>
 
 

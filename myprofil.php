@@ -2,10 +2,10 @@
   include ("php/db.php");
 ?>
 
-<?php include("layouts/header.php");?>
+  <?php include("layouts/header.php");?>
 
-<?php include("php/get_myprofilinfo.php");?>
-<?php include("php/get_myparticipatedevent.php");?>
+  <?php include("php/get_myprofilinfo.php");?>
+  <?php include("php/get_myparticipatedevent.php");?>
 
 <main class="fond_blur">
 
@@ -43,4 +43,4 @@
 </main>
 
 
-<?php include("layouts/footer.php");?>
+  <?php include("layouts/footer.php");?>

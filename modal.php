@@ -1,10 +1,10 @@
 
 <!-- NE COPIE COLLE PAS CA -->
-  <?php include("php/db.php");
-     include("layouts/header.php");
-     include("php/get_events.php")
+<?php include("php/db.php");
+include("layouts/header.php");
+include("php/get_events.php")
 
-    ?>
+?>
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
   Test pour voir si ça amrche
@@ -22,7 +22,7 @@
         </button>
       </div>
       <div class="modal-body">
-      Vous être inscrit en tant que participant à l'évènement <?php echo $event['title'] ?> !
+        Vous être inscrit en tant que participant à l'évènement <?php echo $event['title'] ?> !
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Youpi !</button>

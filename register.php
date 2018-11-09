@@ -11,7 +11,7 @@
 					<input class="form-control" type="text" name="last_name" id="last_name">
 					<?php if(isset($_SESSION['errors']) && array_key_exists('last_name', $_SESSION['errors'])){ ?>
 						<div class="alert alert-danger mt-2">
-						<?php echo $_SESSION['errors']['last_name']; ?>
+							<?php echo $_SESSION['errors']['last_name']; ?>
 						</div>
 					<?php } ?>
 				</div>
@@ -20,7 +20,7 @@
 					<input class="form-control" type="text" name="first_name" id="first_name">
 					<?php if(isset($_SESSION['errors']) && array_key_exists('first_name', $_SESSION['errors'])){ ?>
 						<div class="alert alert-danger mt-2">
-						<?php echo $_SESSION['errors']['first_name']; ?>
+							<?php echo $_SESSION['errors']['first_name']; ?>
 						</div>
 					<?php } ?>
 				</div>
@@ -29,7 +29,7 @@
 					<input class="form-control" type="email" name="email" id="email">
 					<?php if(isset($_SESSION['errors']) && array_key_exists('email', $_SESSION['errors'])){ ?>
 						<div class="alert alert-danger mt-2">
-						<?php echo $_SESSION['errors']['email']; ?>
+							<?php echo $_SESSION['errors']['email']; ?>
 						</div>
 					<?php } ?>
 				</div>
@@ -40,7 +40,7 @@
 					<input class="form-control" type="password" name="password" id="password">
 					<?php if(isset($_SESSION['errors']) && array_key_exists('password', $_SESSION['errors'])){ ?>
 						<div class="alert alert-danger mt-2">
-						<?php echo $_SESSION['errors']['password']; ?>
+							<?php echo $_SESSION['errors']['password']; ?>
 						</div>
 					<?php } ?>
 				</div>

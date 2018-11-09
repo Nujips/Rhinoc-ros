@@ -32,10 +32,10 @@ $error="";
 					<input class="form-control" type="datetime-local" name="datestart" id="datestart">
 				</div>
 
-        <div class="form-group">
-          <label for="dateend">Date de fin: </label>
-          <input class="form-control" type="datetime-local" name="dateend" id="dateend">
-        </div>
+				<div class="form-group">
+					<label for="dateend">Date de fin: </label>
+					<input class="form-control" type="datetime-local" name="dateend" id="dateend">
+				</div>
 
 			</div>
 
@@ -52,15 +52,15 @@ $error="";
 					<input class="form-control" type="url" name="url" id="url">
 				</div>
 
-        <div class="form-group">
-          <label for="price">Prix: </label>
-          <input class="form-control" type="number" name="price" id="price">
-        </div>
+				<div class="form-group">
+					<label for="price">Prix: </label>
+					<input class="form-control" type="number" name="price" id="price">
+				</div>
 
-        <div class="form-group">
-          <label for="participant_number">Nombre maximum de participants: </label>
-          <input class="form-control" type="number" name="participant_number" id="participant_number">
-        </div>
+				<div class="form-group">
+					<label for="participant_number">Nombre maximum de participants: </label>
+					<input class="form-control" type="number" name="participant_number" id="participant_number">
+				</div>
 
 			</div>
 

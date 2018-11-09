@@ -5,10 +5,10 @@
           FROM events
           WHERE id=:id";
 
-  $stmt = $conn->prepare($sql);
-  $stmt->bindValue(":id", $id);
-  $stmt->execute();
-  $eventinfo = $stmt->fetch();
+$stmt = $conn->prepare($sql);
+$stmt->bindValue(":id", $id);
+$stmt->execute();
+$eventinfo = $stmt->fetch();
 
   /*----faire une requete qui recupere l'idcreator de la personne de l'event-----*/
   $sql= "SELECT idcreator FROM events WHERE id=:id";
@@ -17,4 +17,4 @@
   $stmt->execute();
   $creator=$stmt->fetch();
 
-  ?>
+?>

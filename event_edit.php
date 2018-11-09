@@ -1,19 +1,19 @@
-<?php
-require("php/db.php");
-?>
+	<?php
+	require("php/db.php");
+	?>
 
-<?php include("layouts/header.php");?>
+	<?php include("layouts/header.php");?>
 
 <?php
 include("php/get_eventinfo.php");
 $iduser = $_SESSION['member']['id'];
 ?>
 
-<main class="fond_blur">
+	<main class="fond_blur">
 
 	<h1>Modifier l'evenement </h1>
 
-	<form method="post" action="php/event_edit.php">
+		<form method="post" action="php/event_edit.php">
 
 		<!--Securise la page pour la bonne personne-->
 		<?php
@@ -82,4 +82,4 @@ $iduser = $_SESSION['member']['id'];
 </main>
 
 
-<?php include("layouts/footer.php");?>
+	<?php include("layouts/footer.php");?>
