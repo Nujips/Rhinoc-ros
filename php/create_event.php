@@ -2,6 +2,7 @@
 session_start();
 require('db.php');
 $error="";
+
 /*----------------RECUPERER L'ID DE LA PERSONNE CONNCECTEE------------------*/
 $iduser = $_SESSION['member']['id'];
 
@@ -40,7 +41,7 @@ if(!empty($_POST)){
 
 	if(empty($error)){
 
-	/*mettre les infos dans la bd*/
+	/*Ajouter les infos dans la bd*/
 	$sql = "INSERT INTO events
 					VALUES(NULL, :title, :description, :datestart, :dateend, :iduser, :adress, :url, NOW(), :price, :participant_number )";
 	$stmt = $conn->prepare($sql);
@@ -59,7 +60,6 @@ if(!empty($_POST)){
 	else{
 		echo ($error);
 	}
-
 }
 
 

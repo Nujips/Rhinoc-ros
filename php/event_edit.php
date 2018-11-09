@@ -60,7 +60,7 @@ if(!empty($_POST)){
 
 	$stmt->execute();
 
-	header('Location: ../index.php'); /*mettre le bon id   info.php?id=<?php echo $id ?>*/
+	header('Location: ../index.php'); 
 	}
 
 }

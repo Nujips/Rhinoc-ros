@@ -1,4 +1,6 @@
 <?php
+
+/****Ne fonctionne pas *****/
 require("db.php");
 
 $id = $_SESSION['member']['id'];

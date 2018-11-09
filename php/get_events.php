@@ -1,7 +1,5 @@
 <?php
 /* recupere les derniers evenements dans la bd */
-
-  //requete sql
   $sql="SELECT *
         FROM events
         ORDER BY date_created DESC";
@@ -11,5 +9,4 @@
   $stmt->execute();
   //va chercher les résultats chez MySQL
   $events = $stmt->fetchAll();
-
 ?>

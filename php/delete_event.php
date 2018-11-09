@@ -10,5 +10,4 @@
   $stmt->execute();
 
   header('Location: ../myprofil.php');
-
-  ?>
+?>
